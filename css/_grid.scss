@@ -1,0 +1,17 @@
+@import '_vars.scss';
+@import '_mixins.scss';
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  @include clearListStyles;//В _mixin.scss
+
+  &__item {
+    width: 275px;//Ширина карточки
+    margin-bottom: $gridGutter;//В _variables.scss
+
+    &:not(:nth-child(4n)){      
+      margin-right: $gridGutter;//В _variables.scss
+    }
+  }
+}

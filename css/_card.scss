@@ -1,0 +1,36 @@
+@import '_vars.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #bfbfbf;
+  border-radius: 6px;
+  height: 100%;//Чтобы карточки имели одинаковую высоту
+
+  &__image {
+    height: 200px;//ограничили ссылку по высоте
+
+    img {
+      width: 100%;//оцентрированное изображение
+      height: 100%;//оцентрированное изображение
+      object-fit: cover;//Чтобы занимал всю ширину
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 20px;
+
+    a {
+      text-decoration: none;
+      color: $colorText;//В _variables.scss
+    }
+  }
+
+  &__price {
+    margin-top: auto;
+    font-size: 18px;
+    color: $colorTextLight;//В _variables.scss
+  }
+}

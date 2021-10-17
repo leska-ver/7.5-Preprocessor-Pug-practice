@@ -1,0 +1,2 @@
+1. Ctrl+Shift+P -> pug -> Start Pug Compiler
+2. Ctrl+Shift+P -> sass -> Watch Sass 

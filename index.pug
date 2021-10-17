@@ -1,0 +1,48 @@
+//- <!DOCTYPE html>
+//- <html lang="en">
+//-    <head>
+//-       <meta charset="UTF-8">
+//-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//-       <title>Магазин с продуктами</title>
+//-       <link rel="stylesheet" href="css/style.css">
+//-    </head>
+//-    <body>
+//-       <div class="container">
+//-          <ul class="grid">
+//-             <li class="grid__item">
+//-                <article class="card">
+//-                   <a class="card__image" href="">
+//-                   <img src="../img/noimg.png" alt="Нет изображения товара">
+//-                   </a>
+//-                   <h3 class="card__title">
+//-                      <a href="">Iphone 12 Pro Max 265gb</a>
+//-                   </h3>
+//-                   <spam class="card__price">129 000 р</spam>
+//-                </article>
+//-             </li>            
+//-          </ul>
+//-       </div>
+//-    </body>
+//- </html>
+
+doctype html 
+html(lang="en")
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1,0")
+    title Pug 
+    link(rel="stylesheet" href=".../css/style.css")
+  body 
+    - var products = [{title: 'Iphone 12 Pro Max 265gb', price: '129 00 р'}, {title: 'Энергетический напиток Red Bull', price: '136 р'}, {title: 'Фотоаппарат Canon EOS M50 Kit', price: '65 000 р'}, {title: 'Метеостанция Xiaomi Mijia Bluetooth', price: '469 р'}, {title: 'Настенный светильник MW-Light', price: '129 00 р'}]
+    .container  
+      ul.grid 
+        each product in products
+          li.grid__item 
+            article.card 
+              a.card__image(href="#")
+                img(src="../img/noimg.png" alt="Нет изображения товара")
+              h3.card__title 
+                a(href="#")= product.title
+              span.card__price= product.price  
